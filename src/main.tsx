@@ -1,9 +1,8 @@
-import { createRoot } from 'react-dom/client';
-import { App } from './containers/App';
-
-import { ThemeProvider } from './theme';
-
+import ReactDOM from 'react-dom';
 import WebFont from 'webfontloader';
+
+import { App } from './containers/App';
+import { ThemeProvider } from './theme';
 
 WebFont.load({
     google: {
@@ -12,9 +11,9 @@ WebFont.load({
 });
 
 const container = document.getElementById('app');
-const root = createRoot(container!);
-root.render(
+ReactDOM.render(
     <ThemeProvider>
         <App />
     </ThemeProvider>,
+    container!,
 );
