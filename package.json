@@ -2,7 +2,7 @@
   "name": "kojiodyssey.github.io",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://kojiodyssey.github.io/me",
+  "homepage": "https://kojiodyssey.github.io",
   "license": "Apache-2.0",
   "scripts": {
     "predeploy": "yarn build",
