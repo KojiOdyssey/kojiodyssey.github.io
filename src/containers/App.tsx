@@ -6,7 +6,7 @@ import { Header } from '../components/Header';
 
 const Wrapper = ({ children }: PropsWithChildren<unknown>) => {
     return (
-        <Container maxW={'90%'} minH={'100vh'} flexDirection={{ base: 'column', md: 'row' }}>
+        <Container maxW={'full'} height={'full'} flexDirection={{ base: 'column', md: 'row' }} p={{ base: 4, md: 12 }}>
             {children}
         </Container>
     );

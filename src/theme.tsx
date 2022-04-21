@@ -14,11 +14,11 @@ export const ThemeProvider = ({ children }: PropsWithChildren<unknown>) => {
         styles: {
             global: (props: Dict<any>) => ({
                 body: {
-                    bg: mode('#f4f4f4', '#1c1c1c')(props),
-                    color: mode('#1c1c1c', '#f4f4f4')(props),
+                    bg: mode('#f4f4f4', '#0c0c0c')(props),
+                    color: mode('#0c0c0c', '#f4f4f4')(props),
                 },
                 _selection: {
-                    background: mode('#f4f4f4', '#1c1c1c')(props),
+                    background: mode('#f4f4f4', '#0c0c0c')(props),
                 },
             }),
         },

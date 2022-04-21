@@ -6,7 +6,7 @@ import { ThemeProvider } from './theme';
 
 WebFont.load({
     google: {
-        families: ['Rubik:300,700', 'Meow Script'],
+        families: ['Rubik:300,600', 'Meow Script'],
     },
 });
 

@@ -1,15 +1,21 @@
-import { Box, Button, Container, Link, Stack, Text, useColorMode } from '@chakra-ui/react';
+import { Button, Container, Link, Stack, Text, useColorMode } from '@chakra-ui/react';
 
 export const Footer = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     return (
         <Container
-            display="flex"
             as={Stack}
-            maxW="full"
-            direction={{ base: 'column', md: 'row' }}
-            justify={{ base: 'center', md: 'space-between' }}
+            direction={'row'}
+            maxW={'inherit'}
+            position={'fixed'}
+            bottom={0}
+            left={0}
+            right={0}
             align={{ base: 'center', md: 'center' }}
+            fontSize={{ base: 'xl', md: '2xl' }}
+            justify={{ base: 'center', md: 'space-between' }}
+            p={{ base: 8, md: 12 }}
+            spacing={{ base: 4, md: 7 }}
         >
             <Text>
                 Contact me:{' '}
@@ -23,17 +29,12 @@ export const Footer = () => {
                     kojiody@gmail.com
                 </Link>
             </Text>
-            <Box as={Stack} direction={{ base: 'column', md: 'row' }} align={{ base: 'center', md: 'center' }}>
-                <Button
-                    fontSize={{ base: 'lg', md: 'xl' }}
-                    variant="ghost"
-                    borderRadius="full"
-                    onClick={toggleColorMode}
-                >
+            <Stack align={{ base: 'center', md: 'center' }} direction={'row'}>
+                <Button fontSize="inherit" variant="ghost" borderRadius="full" onClick={toggleColorMode}>
                     {colorMode === 'light' ? '🌙' : '☀️'}
                 </Button>
-                <Text>© 2022</Text>
-            </Box>
+                <Text whiteSpace={'nowrap'}>© 2022</Text>
+            </Stack>
         </Container>
     );
 };
